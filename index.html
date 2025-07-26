@@ -3,114 +3,100 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AlphaPCs - High Performance Gaming PCs</title>
+<title>AlphaPCs</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
   body {
-    margin: 0; background-color: #121212; color: #eee;
-    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   header {
-    background: #1f1f1f;
-    padding: 20px 40px;
-    display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 2px solid #bb86fc;
+    text-align: center;
+    margin-bottom: 40px;
   }
-  .logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 28px;
-    color: #bb86fc;
-    letter-spacing: 3px;
-  }
-  main {
-    padding: 30px 40px;
-    max-width: 1100px;
-    margin: auto;
-  }
-  h1 {
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #bb86fc;
+  header h1 {
+    font-size: 2.8rem;
+    color: #00ffc2;
+    letter-spacing: 2px;
+    margin: 0;
   }
   .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-grow: 1;
   }
-  .product {
-    background: #1f1f1f;
-    border-radius: 12px;
+  .pc {
+    background: #1e1e1e;
+    border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 0 15px #6200ea40;
+    box-shadow: 0 6px 15px rgba(0, 255, 194, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
   }
-  .product img {
-    width: 100%;
-    border-radius: 10px;
+  .pc:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 255, 194, 0.6);
+  }
+  .pc img {
+    max-width: 100%;
+    border-radius: 12px;
     margin-bottom: 15px;
-    object-fit: cover;
-    height: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
   }
-  .product h2 {
-    font-size: 22px;
-    color: #bb86fc;
-    margin: 0 0 10px 0;
-  }
-  .specs {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #ccc;
-    margin-bottom: 15px;
-  }
-  .price {
-    font-size: 18px;
-    font-weight: 700;
-    color: #03dac6;
-    margin-bottom: 15px;
-  }
-  .buy-btn {
-    background: #bb86fc;
-    color: #121212;
-    border: none;
-    padding: 12px 0;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
+  .pc h2 {
+    margin: 0 0 12px 0;
+    color: #00ffc2;
+    font-size: 1.6rem;
     text-align: center;
-    text-decoration: none;
   }
-  .buy-btn:hover {
-    background: #9f6fff;
+  .pc p {
+    margin: 6px 0;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .buy {
+    margin-top: auto;
+    background: #00ffc2;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 255, 194, 0.5);
+    transition: background-color 0.25s ease;
+  }
+  .buy:hover {
+    background: #00d9a9;
   }
   footer {
+    margin-top: 50px;
     text-align: center;
-    padding: 25px 20px;
-    color: #666;
-    font-size: 14px;
+    font-size: 0.9rem;
+    color: #777;
   }
-  .contact {
-    margin-top: 40px;
-    text-align: center;
-  }
-  .contact a {
-    color: #03dac6;
+  footer a {
+    color: #00ffc2;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
   }
-  .contact a:hover {
+  footer a:hover {
     text-decoration: underline;
   }
-  @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-      text-align: center;
-    }
-    .logo {
-      margin-bottom: 15px;
+  @media (max-width: 400px) {
+    body {
+      padding: 15px 10px;
     }
   }
 </style>
@@ -118,66 +104,49 @@
 <body>
 
 <header>
-  <div class="logo">AlphaPCs</div>
+  <h1>AlphaPCs - Featured Gaming PCs</h1>
 </header>
 
-<main>
-  <h1>Featured Gaming PCs</h1>
-  <section class="products">
+<main class="products">
 
-    <article class="product">
-      <img src="https://m.media-amazon.com/images/I/71iDXApR9RL._AC_SL1500_.jpg" alt="Alpha Gaming Beast" />
-      <h2>Alpha Gaming Beast</h2>
-      <div class="specs">
-        CPU: AMD Ryzen 7 5800X<br/>
-        GPU: NVIDIA GeForce RTX 4070<br/>
-        RAM: 32GB DDR4 3200MHz<br/>
-        Storage: 1TB NVMe SSD
-      </div>
-      <div class="price">6,999 SAR</div>
-      <a class="buy-btn" href="https://wa.me/966500778055" target="_blank" rel="noopener">Contact to Buy</a>
-    </article>
-
-    <article class="product">
-      <img src="https://m.media-amazon.com/images/I/61rhJGKrfSL._AC_SL1500_.jpg" alt="Alpha Workstation Pro" />
-      <h2>Alpha Workstation Pro</h2>
-      <div class="specs">
-        CPU: Intel Core i7-12700K<br/>
-        GPU: NVIDIA RTX 3060 Ti<br/>
-        RAM: 32GB DDR4 3600MHz<br/>
-        Storage: 2TB SATA SSD
-      </div>
-      <div class="price">6,199 SAR</div>
-      <a class="buy-btn" href="https://wa.me/966500778055" target="_blank" rel="noopener">Contact to Buy</a>
-    </article>
-
-    <article class="product">
-      <img src="https://m.media-amazon.com/images/I/71N3JxhU1tL._AC_SL1500_.jpg" alt="Alpha Budget Builder" />
-      <h2>Alpha Budget Builder</h2>
-      <div class="specs">
-        CPU: AMD Ryzen 5 5600X<br/>
-        GPU: NVIDIA GTX 1660 Super<br/>
-        RAM: 16GB DDR4 3200MHz<br/>
-        Storage: 512GB NVMe SSD
-      </div>
-      <div class="price">3,799 SAR</div>
-      <a class="buy-btn" href="https://wa.me/966500778055" target="_blank" rel="noopener">Contact to Buy</a>
-    </article>
-
+  <section class="pc">
+    <img src="https://m.media-amazon.com/images/I/71iDXApR9RL._AC_SL1500_.jpg" alt="Gaming Beast X1" />
+    <h2>Gaming Beast X1</h2>
+    <p>CPU: AMD Ryzen 7 5800X</p>
+    <p>GPU: RTX 4070 Super</p>
+    <p>RAM: 32GB DDR4</p>
+    <p>Storage: 1TB NVMe SSD</p>
+    <p>Price: 6,999 SAR</p>
+    <a class="buy" href="https://wa.me/966500778055" target="_blank" rel="noopener">Buy on WhatsApp</a>
   </section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>WhatsApp: <a href="https://wa.me/966500778055" target="_blank" rel="noopener">0500 778 055</a></p>
+  <section class="pc">
+    <img src="https://m.media-amazon.com/images/I/61rhJGKrfSL._AC_SL1500_.jpg" alt="Workstation Pro" />
+    <h2>Workstation Pro</h2>
+    <p>CPU: Intel Core i7-12700K</p>
+    <p>GPU: NVIDIA RTX 3060 Ti</p>
+    <p>RAM: 32GB DDR4</p>
+    <p>Storage: 2TB SATA SSD</p>
+    <p>Price: 6,199 SAR</p>
+    <a class="buy" href="https://wa.me/966500778055" target="_blank" rel="noopener">Buy on WhatsApp</a>
   </section>
+
+  <section class="pc">
+    <img src="https://m.media-amazon.com/images/I/71N3JxhU1tL._AC_SL1500_.jpg" alt="Budget Builder" />
+    <h2>Budget Builder</h2>
+    <p>CPU: AMD Ryzen 5 5600X</p>
+    <p>GPU: NVIDIA GTX 1660 Super</p>
+    <p>RAM: 16GB DDR4</p>
+    <p>Storage: 512GB NVMe SSD</p>
+    <p>Price: 3,799 SAR</p>
+    <a class="buy" href="https://wa.me/966500778055" target="_blank" rel="noopener">Buy on WhatsApp</a>
+  </section>
+
 </main>
 
 <footer>
-  &copy; 2025 AlphaPCs. All rights reserved.
+  &copy; 2025 AlphaPCs. Contact us: <a href="https://wa.me/966500778055">0500 778 055</a>
 </footer>
-
-</body>
-</html>
 
 </body>
 </html>
