@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Build Your Own PC - AlphaPCs</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  h1 {
+    color: #00ffc2;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  label {
+    font-weight: 700;
+  }
+  select, input[type="text"], input[type="email"] {
+    background-color: #1e1e1e;
+    border: 1px solid #00ffc2;
+    border-radius: 6px;
+    color: #eee;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  input[type="submit"] {
+    background-color: #00ffc2;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #00d9a9;
+  }
+  a.back {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #00ffc2;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  a.back:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>Build Your Own PC (For Pros Only)</h1>
+
+<form action="https://formspree.io/f/your-form-id" method="POST">
+  <label for="name">Your Name *</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Email Address *</label>
+  <input type="email" id="email" name="_replyto" required />
+
+  <label for="cpu">Select CPU</label>
+  <select id="cpu" name="CPU">
+    <option value="AMD Ryzen 7 5800X">AMD Ryzen 7 5800X</option>
+    <option value="Intel Core i9-13900K">Intel Core i9-13900K</option>
+    <option value="AMD Ryzen 5 5600X">AMD Ryzen 5 5600X</option>
+    <option value="Intel Core i7-12700K">Intel Core i7-12700K</option>
+  </select>
+
+  <label for="gpu">Select GPU</label>
+  <select id="gpu" name="GPU">
+    <option value="NVIDIA RTX 4070 Super">NVIDIA RTX 4070 Super</option>
+    <option value="NVIDIA RTX 4080">NVIDIA RTX 4080</option>
+    <option value="NVIDIA RTX 3060 Ti">NVIDIA RTX 3060 Ti</option>
+    <option value="NVIDIA GTX 1660 Super">NVIDIA GTX 1660 Super</option>
+  </select>
+
+  <label for="ram">Select RAM</label>
+  <select id="ram" name="RAM">
+    <option value="16GB DDR4">16GB DDR4</option>
+    <option value="32GB DDR4">32GB DDR4</option>
+    <option value="64GB DDR5">64GB DDR5</option>
+  </select>
+
+  <label for="storage">Select Storage</label>
+  <select id="storage" name="Storage">
+    <option value="512GB NVMe SSD">512GB NVMe SSD</option>
+    <option value="1TB NVMe SSD">1TB NVMe SSD</option>
+    <option value="2TB SATA SSD">2TB SATA SSD</option>
+  </select>
+
+  <input type="submit" value="Submit Build Request" />
+</form>
+
+<a href="index.html" class="back">← Back to Home</a>
+
+</body>
+</html>
