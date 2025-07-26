@@ -67,22 +67,18 @@
     line-height: 1.3;
     text-align: center;
   }
-  form.paypal {
-    margin-top: 15px;
-  }
-  input.buy-button {
-    background: #00ffc2;
-    border: none;
-    padding: 12px 25px;
+  .pc a.details-link {
+    margin-top: 12px;
+    padding: 10px 18px;
     border-radius: 8px;
+    background-color: #00ffc2;
+    color: #000;
     font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 255, 194, 0.5);
-    transition: background-color 0.25s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
   }
-  input.buy-button:hover {
-    background: #00d9a9;
+  .pc a.details-link:hover {
+    background-color: #00d9a9;
   }
   footer {
     margin-top: 50px;
@@ -112,61 +108,46 @@
 
 <main class="products">
 
-  <!-- Gaming Beast X1 -->
   <section class="pc">
-    <img src="https://m.media-amazon.com/images/I/71iDXApR9RL._AC_SL1500_.jpg" alt="Gaming Beast X1" />
+    <img src="images/gaming-beast-x1.jpg" alt="Gaming Beast X1" />
     <h2>Gaming Beast X1</h2>
-    <p>CPU: AMD Ryzen 7 5800X</p>
-    <p>GPU: RTX 4070 Super</p>
-    <p>RAM: 32GB DDR4</p>
-    <p>Storage: 1TB NVMe SSD</p>
     <p>Price: 6,999 SAR</p>
-    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
-      <input type="hidden" name="item_name" value="Gaming Beast X1" />
-      <input type="hidden" name="amount" value="6999" />
-      <input type="hidden" name="currency_code" value="SAR" />
-      <input class="buy-button" type="submit" value="Buy Now" />
-    </form>
+    <a href="pcs/gaming-beast-x1.html" class="details-link">View Details</a>
   </section>
 
-  <!-- Workstation Pro -->
   <section class="pc">
-    <img src="https://m.media-amazon.com/images/I/61rhJGKrfSL._AC_SL1500_.jpg" alt="Workstation Pro" />
+    <img src="images/workstation-pro.jpg" alt="Workstation Pro" />
     <h2>Workstation Pro</h2>
-    <p>CPU: Intel Core i7-12700K</p>
-    <p>GPU: NVIDIA RTX 3060 Ti</p>
-    <p>RAM: 32GB DDR4</p>
-    <p>Storage: 2TB SATA SSD</p>
     <p>Price: 6,199 SAR</p>
-    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
-      <input type="hidden" name="item_name" value="Workstation Pro" />
-      <input type="hidden" name="amount" value="6199" />
-      <input type="hidden" name="currency_code" value="SAR" />
-      <input class="buy-button" type="submit" value="Buy Now" />
-    </form>
+    <a href="pcs/workstation-pro.html" class="details-link">View Details</a>
   </section>
 
-  <!-- Budget Builder -->
   <section class="pc">
-    <img src="https://m.media-amazon.com/images/I/71N3JxhU1tL._AC_SL1500_.jpg" alt="Budget Builder" />
+    <img src="images/budget-builder.jpg" alt="Budget Builder" />
     <h2>Budget Builder</h2>
-    <p>CPU: AMD Ryzen 5 5600X</p>
-    <p>GPU: NVIDIA GTX 1660 Super</p>
-    <p>RAM: 16GB DDR4</p>
-    <p>Storage: 512GB NVMe SSD</p>
     <p>Price: 3,799 SAR</p>
-    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
-      <input type="hidden" name="item_name" value="Budget Builder" />
-      <input type="hidden" name="amount" value="3799" />
-      <input type="hidden" name="currency_code" value="SAR" />
-      <input class="buy-button" type="submit" value="Buy Now" />
-    </form>
+    <a href="pcs/budget-builder.html" class="details-link">View Details</a>
+  </section>
+
+  <section class="pc">
+    <img src="images/ultra-gamer-z.jpg" alt="Ultra Gamer Z" />
+    <h2>Ultra Gamer Z</h2>
+    <p>Price: 8,499 SAR</p>
+    <a href="pcs/ultra-gamer-z.html" class="details-link">View Details</a>
+  </section>
+
+  <section class="pc">
+    <img src="images/pro-gamer-elite.jpg" alt="Pro Gamer Elite" />
+    <h2>Pro Gamer Elite</h2>
+    <p>Price: 7,299 SAR</p>
+    <a href="pcs/pro-gamer-elite.html" class="details-link">View Details</a>
+  </section>
+
+  <section class="pc">
+    <img src="images/office-master.jpg" alt="Office Master" />
+    <h2>Office Master</h2>
+    <p>Price: 2,199 SAR</p>
+    <a href="pcs/office-master.html" class="details-link">View Details</a>
   </section>
 
 </main>
@@ -177,3 +158,4 @@
 
 </body>
 </html>
+
