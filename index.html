@@ -65,20 +65,23 @@
     margin: 6px 0;
     font-size: 1rem;
     line-height: 1.3;
+    text-align: center;
   }
-  .buy {
-    margin-top: auto;
+  form.paypal {
+    margin-top: 15px;
+  }
+  input.buy-button {
     background: #00ffc2;
-    color: #000;
+    border: none;
     padding: 12px 25px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
+    cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 255, 194, 0.5);
     transition: background-color 0.25s ease;
   }
-  .buy:hover {
+  input.buy-button:hover {
     background: #00d9a9;
   }
   footer {
@@ -109,6 +112,7 @@
 
 <main class="products">
 
+  <!-- Gaming Beast X1 -->
   <section class="pc">
     <img src="https://m.media-amazon.com/images/I/71iDXApR9RL._AC_SL1500_.jpg" alt="Gaming Beast X1" />
     <h2>Gaming Beast X1</h2>
@@ -117,9 +121,17 @@
     <p>RAM: 32GB DDR4</p>
     <p>Storage: 1TB NVMe SSD</p>
     <p>Price: 6,999 SAR</p>
-    <a class="buy" href="https://wa.me/966500778055" target="_blank" rel="noopener">Buy on WhatsApp</a>
+    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
+      <input type="hidden" name="item_name" value="Gaming Beast X1" />
+      <input type="hidden" name="amount" value="6999" />
+      <input type="hidden" name="currency_code" value="SAR" />
+      <input class="buy-button" type="submit" value="Buy Now" />
+    </form>
   </section>
 
+  <!-- Workstation Pro -->
   <section class="pc">
     <img src="https://m.media-amazon.com/images/I/61rhJGKrfSL._AC_SL1500_.jpg" alt="Workstation Pro" />
     <h2>Workstation Pro</h2>
@@ -128,9 +140,17 @@
     <p>RAM: 32GB DDR4</p>
     <p>Storage: 2TB SATA SSD</p>
     <p>Price: 6,199 SAR</p>
-    <a class="buy" href="https://wa.me/966500778055" target="_blank" rel="noopener">Buy on WhatsApp</a>
+    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
+      <input type="hidden" name="item_name" value="Workstation Pro" />
+      <input type="hidden" name="amount" value="6199" />
+      <input type="hidden" name="currency_code" value="SAR" />
+      <input class="buy-button" type="submit" value="Buy Now" />
+    </form>
   </section>
 
+  <!-- Budget Builder -->
   <section class="pc">
     <img src="https://m.media-amazon.com/images/I/71N3JxhU1tL._AC_SL1500_.jpg" alt="Budget Builder" />
     <h2>Budget Builder</h2>
@@ -139,13 +159,20 @@
     <p>RAM: 16GB DDR4</p>
     <p>Storage: 512GB NVMe SSD</p>
     <p>Price: 3,799 SAR</p>
-    <a class="buy" href="https://wa.me/966500778055" target="_blank" rel="noopener">Buy on WhatsApp</a>
+    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com" />
+      <input type="hidden" name="item_name" value="Budget Builder" />
+      <input type="hidden" name="amount" value="3799" />
+      <input type="hidden" name="currency_code" value="SAR" />
+      <input class="buy-button" type="submit" value="Buy Now" />
+    </form>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2025 AlphaPCs. Contact us: <a href="https://wa.me/966500778055">0500 778 055</a>
+  &copy; 2025 AlphaPCs. Contact us: 0500 778 055
 </footer>
 
 </body>
